@@ -104,7 +104,55 @@
                 </div>
               </section>
 
+              <section id="forecast" class="forecast-container col-lg-8">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-grid"></div>
+              </section>
 
+              <section class="temp-details col-lg-6 col-md-5 mt-3 mt-md-2 mt-lg-0">
+                <div class="card p-1 initial">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex">
+                      <span class="flex-grow-1">Visibility</span>
+                      <span id="visibility">0</span> Km
+                      <i class="fa-solid fa-eye-slash align-items-center"></i>
+                    </li>
+
+                    <li class="list-group-item d-flex">
+                      <span class="flex-grow-1">Wind </span>
+                      <span id="wind">0</span>
+                      <span id="wind-unit">mph</span>
+                      <i class="fa-solid fa-wind align-items-center"></i>
+                    </li>
+
+                    <li class="list-group-item d-flex">
+                      <span class="flex-grow-1">Humidity</span>
+                      <span id="humidity">0</span>%
+                      <i class="fa-solid fa-water align-items-center"></i>
+                    </li>
+
+                    <li class="list-group-item d-flex">
+                      <span class="flex-grow-1">Clouds</span>
+                      <span id="clouds">0</span>%
+                      <i class="fa-solid fa-cloud align-items-center"></i>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="sun-time col-lg-6 col-md mt-3 mt-md-2 mt-lg-0">
+                <div class="card">
+                  <img src="sunset.jpg" class="card-img w-100" id="scenery">
+                  <div class="card-img-overlay text-center">
+                    <i class="fa-solid fa-sun"></i>
+                    <h3 class="fw-light">Sunrise</h3>
+                    <h2 id="sunrise-time"></h2>
+                    <br>
+                    <i class="fa-solid fa-moon"></i>
+                    <h3 class="fw-light">Sunset</h3>
+                    <h2 id="sunset-time"></h2>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>

@@ -44,6 +44,10 @@ body {
     border: 2px solid #fff;
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background: #9e4cb1;
+}
+
 .container {
     margin-bottom: 20px;
 }
@@ -213,4 +217,118 @@ h3 {
 
 #weather-type-desc {
     color: var(--other-icon-color);
+}
+
+.forecast-container {
+    margin: 20px 0px;
+}
+
+.forecast-grid {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.forecast-card {
+    background-color: var(--container-bg);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    min-width: 120px;
+    min-height: 200px;
+    box-shadow: var(--box-shadow);
+}
+
+.forecast-card img {
+    width: 70px;
+    height: 70px;
+}
+
+.forecast-day {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+*::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+*::-webkit-scrollbar-track:horizontal {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:horizontal {
+    background-color: #8f45a0;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+.temp-details i {
+    font-size: 13px;
+    color: var(--other-icon-color);
+    padding-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.temp-details .card {
+    background: var(--container-bg);
+    box-shadow: var(--box-shadow);
+}
+
+.list-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: 100%;
+}
+
+.list-group-item {
+    background: var(--main-bg);
+    color: var(--main-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 120px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.list-group-flush .list-group-item {
+    border-width: 0;
+}
+
+@media (max-width: 991px) {
+    .list-group {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .list-group-item {
+        flex-direction: row;
+        text-align: left;
+        height: 60px;
+        margin: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .list-group {
+        gap: 5px;
+    }
+
+    .list-group-item {
+        font-size: 14px;
+    }
 }
