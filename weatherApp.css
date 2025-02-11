@@ -1,17 +1,17 @@
 :root {
     --main-bg: #f1f1f1;
     --main-text: #111;
-    --container-bg: linear-gradient(-45deg, #c8d0e7, #ffffff);
+    --container-bg: linear-gradient(-45deg, #b9c3e0, #ffffff);
     --global-hover: #e7edfa;
     --icon-color: #00526beb;
-    --box-shadow: -15px -15px 30px #c8d0e7, 7px 7px 25px #ffffff;
+    --box-shadow: -15px -15px 30px #b9c3e0, 7px 7px 25px #ffffff;
     --other-icon-color: #e19908;
 }
 
 .dark {
     --main-bg: #201e25;
     --main-text: #f6f7fa;
-    --container-bg: linear-gradient(344deg, rgba(10, 40, 255, 1), rgba(16, 16, 18, 1));
+    --container-bg: linear-gradient(344deg, rgba(40, 40, 55, 1), rgba(16, 16, 18, 1));
     --global-hover: rgba(49, 205, 236, 0.22);
     --icon-color: rgb(255, 255, 239);
     --box-shadow: 4px 6px 14px #2b2b2bc7;
@@ -81,6 +81,10 @@ header {
     border: 0;
 }
 
+#add-to-fav-btn{
+    color: #ffff00;
+}
+
 .search-btn:hover,
 #add-to-fav-btn:hover {
     background-color: #214a88;
@@ -101,6 +105,7 @@ header {
     justify-content: space-between;
     padding: 5px;
     position: relative;
+    cursor: pointer;
 }
 
 .fa-moon {
@@ -131,4 +136,81 @@ header {
 
 .checkbox:checked + label .circle {
     transform: translateX(31px);
+}
+
+.current-city-weather {
+    background: var(--container-bg);
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    padding: 20px 5px;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+p {
+    margin: 5px 10px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#location {
+    font-weight: bold;
+}
+
+.card,
+.form-check-input {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.current-weather {
+    background: var(--container-bg);
+    box-shadow: var(--box-shadow);
+    color: var(--main-text);
+    border-radius: 10px;
+}
+
+.card {
+    min-height: 300px;
+    margin-top: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.current-weather h1 {
+    font-size: 40px;
+}
+
+.celsius {
+    text-decoration: none;
+    color: var(--other-icon-color);
+    font-size: 25px;
+    position: absolute;
+    padding: 5px 0 0 5px;
+}
+
+.highlow {
+    font-size: 15px;
+    padding-right: 5px;
+}
+
+.weather-icon {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)) drop-shadow(-1px -1px 2px rgba(77, 77, 77, 0.5));
+}
+
+.current-temp-desc {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#weather-type-desc {
+    color: var(--other-icon-color);
 }

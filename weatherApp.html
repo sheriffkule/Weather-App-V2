@@ -38,10 +38,17 @@
             </button>
           </form>
 
-          <button id="add-to-fav-btn" class="btn btn-outline-success col-auto me-3">★</button>
+          <button id="add-to-fav-btn" class="btn btn-outline-success col-auto me-3">
+            ★
+          </button>
 
           <div class="form-check form-switch ps-2 align-self-center col-1 me-4 me-md-1">
-            <input type="checkbox" id="darkLight" class="form-check-input checkbox" role="switch">
+            <input
+              type="checkbox"
+              id="darkLight"
+              class="form-check-input checkbox"
+              role="switch"
+            />
 
             <label for="darkLight" class="label">
               <i class="fa-solid fa-sun"></i>
@@ -52,7 +59,56 @@
         </div>
       </header>
 
-      
+      <div class="row d-flex">
+        <div class="current-city-weather col-ms-lg-4 mt-4">
+          <div class="mx-3 my-4">
+            <h2>Current Weather in <span id="location"></span></h2>
+            <h3 id="today"></h3>
+          </div>
+          <div class="container flex-md-row flex-column">
+            <div class="row">
+              <section class="temp-overview col-lg-4">
+                <div class="current-weather card">
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <h1 class="flex-grow-1">
+                        <span id="temp-now"></span>&deg; <span class="fahrenheit">F</span> / 
+                        <a href="#" class="celsius">C</a>
+                      </h1>
+                      <h3 class="text-end pt-2">
+                        <span class="highlow">High</span>
+                        <span class="temps" id="high-temp">50</span>&deg; 
+                        <span class="fahrenheit">F</span>
+                        <br>
+                        <span class="highlow">Low</span>
+                        <span class="temps" id="low-temp">50</span>&deg; 
+                        <span class="fahrenheit">F</span>
+                      </h3>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <img src="" alt="" width="120px" class="weather-icon default-main-icon">
+                    </div>
+                    <div class="d-flex">
+                      <div class="flex-grow-1 current-temp-desc">
+                        <p>
+                          <span id="description-temp">Mostly Sunny</span>
+                          <br>
+                          Feels like
+                          <span class="temps" id="feels-like"></span>&deg;
+                          <span class="fahrenheit">F</span> <br>
+                          <small id="weather-type-desc"></small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="weatherApp.js"></script>
