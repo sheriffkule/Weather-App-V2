@@ -1,0 +1,134 @@
+:root {
+    --main-bg: #f1f1f1;
+    --main-text: #111;
+    --container-bg: linear-gradient(-45deg, #c8d0e7, #ffffff);
+    --global-hover: #e7edfa;
+    --icon-color: #00526beb;
+    --box-shadow: -15px -15px 30px #c8d0e7, 7px 7px 25px #ffffff;
+    --other-icon-color: #e19908;
+}
+
+.dark {
+    --main-bg: #201e25;
+    --main-text: #f6f7fa;
+    --container-bg: linear-gradient(344deg, rgba(10, 40, 255, 1), rgba(16, 16, 18, 1));
+    --global-hover: rgba(49, 205, 236, 0.22);
+    --icon-color: rgb(255, 255, 239);
+    --box-shadow: 4px 6px 14px #2b2b2bc7;
+    --other-icon-color: #e19908;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--main-bg);
+    color: var(--main-text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    transition: all .3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8f45a0;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+header {
+    padding: 20px 20px !important;
+}
+
+.input-group {
+    font-size: 16px;
+    border-color: #5e5f50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+.search-btn,
+#add-to-fav-btn {
+    background-color: #5e5df0;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px -10px #5e5df0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    border: 0;
+}
+
+.search-btn:hover,
+#add-to-fav-btn:hover {
+    background-color: #214a88;
+    color: #fff;
+}
+
+#darkLight {
+    padding: 15px 24px;
+}
+
+.label {
+    width: 62px;
+    height: 30px;
+    display: flex;
+    background: #111;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+}
+
+.fa-moon {
+    color: #cdc5c5;
+    font-size: 1.5rem;
+}
+
+.fa-sun {
+    color: #f39c12;
+    font-size: 1.5rem;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.circle {
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: all .25s ease-in-out;
+}
+
+.checkbox:checked + label .circle {
+    transform: translateX(31px);
+}
